@@ -5,6 +5,7 @@ using SpaceDefender.Core;
 public class PlayerTests
 {
     private Player player;
+    private global::NewMonoBehaviourScript a;
 
     [SetUp]
     public void SetUp()
