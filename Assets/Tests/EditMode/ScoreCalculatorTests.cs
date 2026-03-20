@@ -40,7 +40,7 @@ public sealed class ScoreCalculatorTests
         calc.ApplyCombo(3);
         calc.ResetMultiplier();
 
-        int score = calc.Calculate(2);
+        int score = calc.Calculate(2, 0);
 
         Assert.AreEqual(2 * 10, score);
     }
