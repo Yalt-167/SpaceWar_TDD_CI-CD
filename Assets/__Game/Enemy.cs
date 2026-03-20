@@ -3,12 +3,14 @@ namespace SpaceDefender.Core
     public class Enemy
     {
         public int Health { get; private set; } = 100;
-        private readonly int reward;
+        private int PointValue { get; }
         public bool IsAlive { get; private set; } = true;
+        public enum EnemyType { Basic, Fast, Tank, }
+        public EnemyType Type{ get; private set; }
 
         public Enemy(int reward_)
         {
-            reward = reward_;
+            PointValue = reward_;
         }
 
         public void TakeDamage(int amount)
@@ -25,6 +27,6 @@ namespace SpaceDefender.Core
                 Health = 0;
         }
 
-        public int GetReward() => IsAlive ? reward : 0;
+        public int GetReward() => IsAlive ? PointValue : 0;
     } 
 }

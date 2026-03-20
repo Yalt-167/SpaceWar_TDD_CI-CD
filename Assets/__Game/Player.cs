@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace SpaceDefender.Core
 {
-    public class Player
+    public sealed class Player
     {
         public int Health { get; private set; } = 100;
         public int Lives { get; private set; } = 3;

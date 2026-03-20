@@ -2,7 +2,7 @@
 using SpaceDefender.Core;
 
 [TestFixture]
-public class PlayerTests
+public sealed class PlayerTests
 {
     private Player player;
 
@@ -22,6 +22,7 @@ public class PlayerTests
 
         Assert.AreEqual(80, player.Health);
     }
+    
 
     [Test]
     public void TakeDamage_WithFatalDamage_SetsHealthToZero()

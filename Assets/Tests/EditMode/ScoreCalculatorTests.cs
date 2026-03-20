@@ -2,10 +2,9 @@ using NUnit.Framework;
 
 using SpaceDefender.Core;
 
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 [TestFixture]
-public class ScoreCalculatorTests
+public sealed class ScoreCalculatorTests
 {
     private ScoreCalculator calc;
     [SetUp]
@@ -13,7 +12,7 @@ public class ScoreCalculatorTests
     [Test]
     public void Calculate_WithZeroKills_ReturnsZero()
     {
-        int score = calc.Calculate(0);
+        int score = calc.Calculate(0, 0);
 
         Assert.AreEqual(0, score);
     }

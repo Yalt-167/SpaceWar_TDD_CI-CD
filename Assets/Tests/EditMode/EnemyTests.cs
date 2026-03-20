@@ -3,7 +3,7 @@ using NUnit.Framework;
 using SpaceDefender.Core;
 
 [TestFixture]
-public class EnemyTests
+public sealed class EnemyTests
 {
     private Enemy enemy;
     [SetUp]
@@ -20,9 +20,7 @@ public class EnemyTests
     [Test]
     public void GetReward_WhenAlreadyDead_ReturnsZero()
     {
-        Enemy enemy = new Enemy(50);
         enemy.TakeDamage(100);
-
         int reward = enemy.GetReward();
 
         Assert.AreEqual(0, reward);
